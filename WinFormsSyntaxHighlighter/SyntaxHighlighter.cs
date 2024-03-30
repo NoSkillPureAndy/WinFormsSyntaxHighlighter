@@ -29,7 +29,13 @@ namespace WinFormsSyntaxHighlighter
 
         private List<StyleGroupPair> _styleGroupPairs;
 
-        private readonly List<PatternStyleMap> _patternStyles = new List<PatternStyleMap>(); 
+        private readonly List<PatternStyleMap> _patternStyles = new List<PatternStyleMap>();
+
+        public void Reset()
+        {
+            _patternStyles.Clear();
+            _styleGroupPairs = null;
+        } 
 
         public SyntaxHighlighter(RichTextBox richTextBox)
         {
